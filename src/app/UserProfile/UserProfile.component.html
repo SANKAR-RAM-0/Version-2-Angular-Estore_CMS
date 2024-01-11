@@ -1,0 +1,29 @@
+
+  <div class="empty-box"></div>
+
+  <div class="profile-picture">
+    <img  *ngFor="let image of images" src="{{image.pic1}}">
+  </div>
+
+  <div class="user-profile">
+  <div class="profile-info">
+    <h2>{{data.fname | uppercase }} {{data.lname | uppercase }}</h2>
+    <p class="animated-text">{{data.email}}</p>
+  </div>
+
+  <div class="profile-details">
+    <h3>Additional Information</h3>
+
+  <!--  <div class="info-item">
+      <span class="label">Address:</span>
+      <span class="value"></span>
+    </div> -->
+    <div class="info-item">
+      <span class="label">Phone:</span>
+      <span class="value">{{data.phoneno}}</span>
+    </div>
+    <!-- Add more details as needed -->
+  </div>
+
+  <button class="edit-profile-button" (click)="editProfile()">Edit Profile</button>
+</div>

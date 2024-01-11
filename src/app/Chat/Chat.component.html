@@ -1,0 +1,23 @@
+<!-- chat-page.component.html -->
+
+<div class="chat-container">
+  <div class="chat-header">
+    <h2>Admin Chat</h2>
+  </div>
+  <div class="chat-messages">
+    <div class="message incoming">
+      <p>Hello! How can I assist you today?</p>
+    </div>
+    <div *ngFor="let chat of userchat">
+    <div class="message outgoing" *ngIf="this.chat.userid == this.userid">
+      <p>{{chat.message}}</p>
+    </div><small *ngIf="this.chat.userid == this.userid">{{chat.date}} {{chat.time}}</small>
+    <!-- Add more chat messages here -->
+  </div></div>
+  <div class="chat-input">
+    <form [formGroup]="usermessage" (submit)="sendMessage()">
+    <input type="text" formControlName="message" placeholder="Type your message here..." >
+    <button class="send-button"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
+</div>

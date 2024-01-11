@@ -1,0 +1,43 @@
+
+h1 {
+  text-align: center;
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+
+.box {
+  box-shadow: 0 4px 8px 0 black;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.price {
+  color: red;
+  font-size: 22px;
+}
+
+img {
+    width:  300px;
+    height: 200px;
+    background-size: cover;
+}
+
+.container {
+  width: 75%;
+  height: auto;
+  padding: 0 8%;
+  border-radius: 15px;
+  margin-left: 70px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}

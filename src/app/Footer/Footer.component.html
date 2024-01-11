@@ -1,0 +1,51 @@
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>Handling customer complaints is easy now. This helps you receive, respond to, and resolve customer grievances with simple solutions, and leaves you with more time for tasks that matter.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-twitter" style='color:#398af3'></i></a>
+          <a href="#"><i class="fa-brands fa-instagram" style='color: white'></i></a>
+          <a href="#"><i class="fa-brands fa-facebook" style="color: #2b72ee;"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp" style='color:#25D366'></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/Home">Home</a></li>
+          <li><a href="/Grievance filling page">Complaint form</a></li>
+          <li><a href="/ContactUs">Contact Us</a></li>
+          <li><a href="/Login">Login</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section subscribe">
+        <h3>Subscribe to Get Updates</h3>
+        <p>Stay updated with our latest news and promotions.</p>
+        <form>
+          <input type="email" name="email" class="footer-input" placeholder="Your email address" required>
+          <button type="submit" class="footer-button" (click)="togglePopup()">Subscribe</button>
+        </form>
+      <!-- Pop-Up -->
+
+      <div class="popup-container" *ngIf="showPopup">
+        <div class="popup-content">
+          <h2>Welcome to Our Newsletter Family!</h2>
+          <h3>You're in! Stay Tuned for Exciting Updates and Offers</h3>
+          <img  *ngFor="let img of image" src="{{img.subscribe}}">
+          <p>You're All Set to Receive Our Newsletter</p>
+          <button (click)="togglePopup()" class="footer-button">Close</button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2023  E-Store Complaint Management System.
+    </div>
+  </div>
+</footer>

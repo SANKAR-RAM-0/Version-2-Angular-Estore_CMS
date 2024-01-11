@@ -1,0 +1,104 @@
+
+.track-complaint-container {
+  margin: 50px;
+  align-content: center;
+  background-image: url("/assets/img/Contact.png");
+  background-repeat: no-repeat;
+  padding-bottom: 70px;
+}
+
+.track-complaint-heading {
+  font-size: 28px;
+  font-style: italic;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.status
+{
+  color: red;
+  font-style: italic;
+}
+
+.box {
+  width: 60%;
+}
+
+/* .complaint */
+.complaint {
+  box-shadow: rgba(100, 100, 111, 0.2) 2px 7px 29px 2px;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+/* Styling for the expanded row */
+.complaint-detail {
+  padding: 30px;
+}
+
+/* View button */
+.view-button {
+  background-color: #4CAF50;
+  color: black;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.view-button:hover {
+  background-color: #45a049;
+}
+
+.view-button:active {
+  transform: scale(0.95);
+}
+
+/* Icon */
+i {
+  font-size: 14px;
+}
+
+/* Chat button */
+.chat-button {
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.chat-button:hover {
+  background-color: #0056b3;
+}
+
+.chat-button:focus {
+  outline: none;
+}
+
+.chat-button:active {
+  transform: scale(0.95);
+}
+
+/* Close button */
+.close-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+}
+
+.close-button:active {
+  transform: scale(0.95);
+}

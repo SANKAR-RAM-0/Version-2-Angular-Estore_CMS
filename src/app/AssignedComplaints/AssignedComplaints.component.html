@@ -1,0 +1,20 @@
+<app-AdminHeader></app-AdminHeader>
+<div class="right-content">
+<table class="assigned-complaints-table">
+  <thead>
+    <tr>
+      <th>Complaint ID</th>
+      <th>Engineer Name</th>
+      <th>Date Assigned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let complaint of details | paginate: {itemsPerPage:4,currentPage:page}">
+      <td>{{ complaint.id }}</td>
+      <td>{{ complaint.engineerName }}</td>
+      <td>{{ complaint.date | date }}</td>
+    </tr>
+  </tbody>
+</table>
+<pagination-controls class="my-pagination" (pageChange)="page = $event"></pagination-controls>
+</div>

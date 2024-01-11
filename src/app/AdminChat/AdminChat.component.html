@@ -1,0 +1,41 @@
+<app-AdminHeader></app-AdminHeader>
+<div class="right-content">
+  <div class="chat-container">
+    <div class="chat-sidebar">
+      <h3>Chats</h3>
+      <div class="user-list">
+      <li *ngFor="let name of username" (click)="openChat(name.fname)">{{name.fname}}</li>
+    </div></div>
+
+    <!-- Chat Area -->
+    <div class="chat-area" [ngClass]="{'opened': selectedChatName !== null}">
+      <button class="close-button" (click)="closeChat()">&#x2716;</button>
+      <div *ngIf="selectedChatName"><hr>
+        <i class="fa-solid fa-message"></i> <h2>{{ selectedChatName | uppercase }}</h2><hr>
+
+        <!-- Your chat area content -->
+        <div *ngFor="let users of usermessage">
+          <div *ngIf="selectedChatName == users.username">
+        <div class="chat-message">
+          <span>{{users.message}}</span>
+        </div>
+        <small>{{users.date}} ({{users.time}})</small></div></div>
+
+        <div *ngFor="let message of admin">
+        <div class="admin-message">
+          <span>{{message.message}}</span>
+        </div>
+        <small class="admin-message-detail">{{message.date}} ({{message.time}})</small>
+        </div>
+
+        <div class="message-input">
+          <form [formGroup]="adminmessage">
+          <input type="text" formControlName="message" placeholder="Type your message here...">
+          <button (click)="sendMessage()" [disabled]="adminmessage.invalid">Send</button>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

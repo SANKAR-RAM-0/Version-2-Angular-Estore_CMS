@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 101.3%;
+  display: flex;
+  margin-left: -10px;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+ background-color: blueviolet;
+}
+.container{
+  max-width: 840px;
+  width: 100%;
+  background-color: white;
+  padding: 2%;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px black;
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.content .complaint-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  margin-left: 40px;
+}
+.complaint-details .input-box{
+  margin-bottom: 15px;
+  width: 90%
+}
+.input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.complaint-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #1a1a1a;
+  border-bottom-width: 2px;
+}
+
+textarea {
+  border: 1px solid #1a1a1a;
+  border-bottom-width: 2px;
+}
+
+h1 {
+  text-align: center;
+}
+.complaint-details .input-box input:focus,
+.complaint-details .input-box input:hover{
+  border-color: blueviolet;
+}
+
+.button{
+   height: 45px;
+   margin: 35px 0;
+ }
+.button input{
+   height: 100%;
+   width: 90%;
+   border-radius: 5px;
+   border: none;
+   margin-left: 30px;
+   color: white;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   background-color: blueviolet;
+ }
+
+ .details {
+  font-size: large;
+ }
+
+.detail {
+  font-size: small;
+  font-style: italic;
+}
+
+small {
+  display: block;
+  color: red;
+  position: absolute;
+  font-style: italic;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+input.ng-invalid {
+  border :3px solid red;
+}
+input.ng-valid{
+  border-left:3px solid green;
+}
+

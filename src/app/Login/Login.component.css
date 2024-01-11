@@ -1,0 +1,162 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+body{
+  /* background-color: blueviolet; */
+  width: 101.3%;
+  margin-left: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.container{
+  max-width: 500px;
+  width: 80%;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 5px;
+  /* box-shadow: 0 0.1px 0.1px black; */
+  margin-top: 70px;
+  margin-left: 550px;
+  margin-bottom: 70px;
+}
+
+.header {
+  width: 100px;
+  display: flex;
+}
+
+.header img {
+  width: 500px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.container .title{
+  font-size: 28px;
+  text-align: center;
+  color: black;
+  padding-top: 20px;
+  font-style: italic;
+}
+.container .title1 {
+  font-size: large;
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+  color:dimgray;
+}
+label {
+  color: black;
+}
+.content .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.user-details .input-box{
+  margin-bottom: 15px;
+  width: 85%;
+  padding-left: 80px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid blueviolet;
+  border-bottom-width: 2px;
+}
+.user-details .input-box input:focus,
+.user-details {
+  border-color: black;
+}
+a:hover {
+  color: black;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button{
+  height: 45px;
+  width: 220px;
+  margin: 20px;
+  margin-left: 110px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: blueviolet;
+ }
+.button input:hover {
+  color:darkgray;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.forgotpassword {
+  padding-left: 85px;
+  font-size: small;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.register {
+  padding-left: 32%;
+}
+.register a{
+  color: blueviolet;
+}
+p {
+  color: black;
+}
+
+.signup {
+  color: white;
+  text-decoration: none;
+}
+
+small {
+  color: red;
+  font-style: italic;
+}
+input.ng-invalid {
+  border :3px solid red;
+}
+input.ng-valid{
+  border-left:3px solid green;
+}

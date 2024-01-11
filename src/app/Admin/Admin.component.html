@@ -1,0 +1,105 @@
+<app-AdminHeader></app-AdminHeader>
+<body>
+  <div class="right-content">
+
+  <section class="main-content">
+    <div class="dashboard-box">
+      <h2>Total Complaints</h2>
+      <p class="count">18</p>
+    </div>
+    <div class="dashboard-box">
+      <h2>Resolved Complaints</h2>
+      <p class="count">11</p>
+    </div>
+    <div class="dashboard-box">
+      <h2>In-Progress</h2>
+      <p class="count">04</p>
+    </div>
+    <div class="dashboard-box">
+      <h2>Pending Complaints</h2>
+      <p class="count">03</p>
+    </div>
+
+  </section>
+
+<table>
+  <thead>
+    <tr>
+      <th>Complaint ID</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Product Name</th>
+      <th>Invoice Number</th>
+      <th>Description</th>
+      <th>Outcome</th>
+      <!-- <th>Action</th> -->
+    </tr>
+  </thead>
+  <tbody *ngFor="let detail of complaints | paginate: {itemsPerPage:4,currentPage:page};">
+  <tr>
+    <td>{{detail.complaintId}}</td>
+    <td>{{detail.date}}</td>
+    <td>{{detail.name}}</td>
+    <td>{{detail.address}}, {{detail.city}} - {{detail.pincode}}</td>
+    <td>{{detail.pname}}</td>
+    <td>{{detail.invoice}}</td>
+    <td>{{detail.description}}</td>
+    <td>{{detail.outcome}}</td>
+    <!-- <td>
+      <button class="btn-accept"  (click)="acceptComplaint()" *ngIf="!isAccepted">Accept</button><br>
+      <button *ngIf="isAccepted" disabled>Accepted</button>
+      <button class="btn-reject" (click)="showRejectPopup()" [disabled]="complaints.rejected">Reject</button>
+    </td> -->
+  </tr>
+  </tbody>
+</table>
+<pagination-controls class="my-pagination" (pageChange)="page = $event"></pagination-controls>
+
+<!-- Accepted Complaints-->
+
+
+<!-- Popup -->
+<div *ngIf="showPopup" class="popup-overlay"></div>
+<div *ngIf="showPopup" class="popup">
+  <div class="popup-header">
+    <h3>Reason for Rejection</h3>
+    <button class="btn-close" (click)="closePopup()">&#x2716;</button>
+  </div>
+  <div class="popup-content">
+    <select [(ngModel)]="rejectReason">
+      <option value="1">Incomplete Information</option>
+      <option value="2">Insufficient Evidence</option>
+      <option value="3">Invalid Complaint</option>
+    </select>
+    <button class="btn-submit" (click)="submitRejection()">Submit</button>
+  </div>
+</div>
+
+
+<!-- Assign complaints -->
+<div>
+  <div class="assign-complaints">
+    <h2>Assigning Complaints</h2>
+    <form [formGroup]="assignedForm" (submit)="assignComplaint(assignedForm.value)">
+    <div class="input-group">
+      <label for="">Complaint ID:</label>
+      <input type="text" name="complaintId" formControlName="id">
+    </div>
+    <div class="input-group" >
+      <label for="">Engineer Name:</label>
+      <select name="engineerName" formControlName="engineerName">
+        <option value="">Select Engineer</option>
+        <option *ngFor="let engineer of details">{{engineer.engineerName}}</option>
+      </select>
+      <div class="select-arrow"></div>
+    </div>
+    <button class="assign-button" (click)="validate()">Assign</button>
+  </form>
+  </div>
+</div>
+
+
+</div>
+
+</body>

@@ -1,0 +1,29 @@
+
+<div class="track-complaint-container">
+  <h2 class="track-complaint-heading">Track Complaints</h2>
+  <p>Check the Status of Your Complaint!</p>
+      <div class="box" *ngFor="let complaint of complaints">
+          <div class="complaint" colspan="4" *ngIf="complaint.userId == this.userId">
+          <p><strong>Complaint ID #:</strong>{{ complaint.complaintId }}</p>
+          <p><strong>Name:</strong> {{ complaint.name }}</p>
+          <p><strong>Date:</strong> {{ complaint.date }}</p>
+          <p class="status"><strong >Status:</strong> {{ complaint.status }}</p>
+            <button class="view-button" (click)="toggleDetails(complaint)"><i class="fa fa-info-circle">&nbsp;</i>View</button>
+            <button class="chat-button" routerLink="/Chat"><i class="fa fa-comments">&nbsp;</i>Chat</button>
+          </div>
+
+        <div *ngIf="complaint.showDetails">
+          <div class="complaint-detail" colspan="6">
+            <p><strong>Complaint ID #:</strong> {{ complaint.complaintId }}</p><hr>
+            <p><strong>Customer Name:</strong> {{ complaint.name }}</p><hr>
+            <p><strong>Product:</strong> {{ complaint.pname}}</p><hr>
+            <p><strong>Description:</strong> {{ complaint.description }}</p><hr>
+            <p><strong>Outcome:</strong> {{ complaint.outcome}}</p><hr>
+            <p class="status"><strong>Status:</strong> {{ complaint.status}}</p><hr>
+            <div *ngFor="let data of assigned">
+            <p *ngIf="complaint.complaintId == data.id"><strong>Assigned To:</strong> "{{data.engineerName}}" on {{data.date}} at {{data.time}}<br><br>{{data.detail}}</p></div><hr>
+            <button class="close-button" (click)="closeComplaint()"><i class="fa-regular fa-circle-xmark">&nbsp;</i>Close</button>
+          </div>
+          </div>
+      </div>
+</div>

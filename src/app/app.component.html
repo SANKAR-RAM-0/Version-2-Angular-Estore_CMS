@@ -1,0 +1,11 @@
+<ng-container *ngIf="this.auth.isAdmin();then show1;else show "></ng-container>
+<ng-template #show>
+  <app-Header></app-Header>
+  <router-outlet></router-outlet>
+  <app-Footer></app-Footer>
+</ng-template>
+
+
+<ng-template #show1>
+  <router-outlet></router-outlet>
+</ng-template>

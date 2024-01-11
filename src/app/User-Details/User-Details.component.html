@@ -1,0 +1,24 @@
+<app-AdminHeader></app-AdminHeader>
+<div class="right-content">
+  <table class="user-details-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let detail of userdetail | paginate: {itemsPerPage:5,currentPage:page};">
+      <tr>
+        <td>{{detail.fname}} {{detail.lname}}</td>
+        <td>{{detail.email}}</td>
+        <td>{{detail.phoneno}}</td>
+          <td>
+            <button class="delete-button" (click)="deleteuser(detail.id)">Delete</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls class="my-pagination" (pageChange)="page = $event"></pagination-controls>
+</div>

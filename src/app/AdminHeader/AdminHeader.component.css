@@ -1,0 +1,51 @@
+.left-fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px; /* Adjust the width according to your needs */
+  height: 100vh; /* Adjust the height according to your needs */
+  background-color: black; /* Add desired background color */
+  padding: 20px; /* Add desired padding */
+  box-sizing: border-box; /* Ensure padding is included in width and height calculations */
+  z-index: 100; /* Set a higher z-index if needed to ensure it's on top of other content */
+  text-align: center;
+}
+
+.sidebar-navigation {
+  font-size: 16px;
+}
+
+
+.sidebar-navigation h2{
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.sidebar-navigation a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.sidebar-navigation li{
+  padding: 12px;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+.sidebar-navigation li a{
+  color: white;
+}
+
+.sidebar-navigation li:hover{
+  background-color: blueviolet;
+}
+
+a:active {
+  transform: scale(0.95);
+}
+

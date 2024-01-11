@@ -1,0 +1,143 @@
+.right-content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.chat-container {
+  display: flex;
+  position: relative;
+}
+
+.chat-sidebar {
+  width: 200px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0px;
+  border: 1px solid black;
+  margin: 0;
+}
+
+.user-list li {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+li:active {
+  color: blueviolet;
+}
+
+li:hover {
+  background-color: black;
+  color: white;
+}
+
+.opened {
+  transform: translateX(100px); /* Width of the chat-sidebar */
+}
+
+.chat-area {
+  flex-grow: 0.3;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  padding: 10px;
+  background-color: #fff;
+  border-left: 1px solid #fff;
+  overflow-y: auto;
+  width: 300px;
+  height: fit-content;
+}
+
+.opened .chat-area {
+  box-shadow: 1 1 1 1px rgba(0, 0, 1, 1);
+  border: 1px solid black;
+}
+
+.close-button {
+  float: right;
+  position: relative;
+  top: 10px;
+  visibility: hidden;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.opened .close-button {
+  visibility: visible;
+}
+
+/* Add any additional styles for the chat area as needed */
+
+.chat-message {
+  overflow-y: auto;
+  max-height: fit-content;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 30px;
+}
+
+small {
+  font-size: 12px;
+}
+
+
+.admin-message {
+  background-color: #f0f0f0;
+  max-height: fit-content;
+  padding: 5px;
+  padding-left: 20PX;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 150PX;
+  border-radius: 5px;
+  border: 0.1px solid black;
+}
+
+.admin-message-detail {
+  display: block;
+  text-align: right;
+}
+
+.message-input {
+  padding-top: 10px;
+  display: flex;
+  margin-left: 80px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 10px;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.message-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message-input button:hover {
+  background-color: #0056b3;
+}

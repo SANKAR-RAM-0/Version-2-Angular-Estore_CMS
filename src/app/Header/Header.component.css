@@ -1,0 +1,123 @@
+
+*{
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+h1
+ {
+  color: white;
+  text-align: center;
+ }
+
+.logo a {
+  margin-top: -25px;
+  position: absolute;
+  display: flex;
+  height: 80px;
+}
+
+body {
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  width: 101.3%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+nav {
+  padding: 30px;
+  text-align: right;
+  background-color: black;
+  display: block;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: blueviolet;
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -8px;
+  width: 100%;
+  height: 3px;
+  background-color: blueviolet;
+  border-radius: 2px;
+}
+
+/* .logout {
+  padding: 7px;
+  color: white;
+  border-radius: 10px;
+}
+
+.login {
+  padding: 4px;
+}
+
+.logout:active {
+  transform: scale(0.95);
+} */
+
+.nav-item {
+  color: white;
+  cursor: pointer;
+}
+
+.username {
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 47px;
+  right: 15px;
+  text-align: center;
+  background-color: black;
+  /* border: 0.1px solid white; */
+  border-radius: 5px;
+  padding: 20px 0;
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
